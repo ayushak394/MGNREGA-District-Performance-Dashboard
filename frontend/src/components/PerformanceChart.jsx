@@ -17,6 +17,8 @@ import {
   FaQuestionCircle,
 } from "react-icons/fa";
 import "./PerformanceChart.css";
+import API_BASE from "../api"; // or correct relative path
+
 
 const SummaryCard = ({
   value,
@@ -55,7 +57,7 @@ const PerformanceChart = ({ selection }) => {
 
     axios
       .get(
-        `http://localhost:8080/api/performance/${district}?month=${month}&year=${year}`
+        `${API_BASE}/api/performance/${district}?month=${month}&year=${year}`
       )
       .then((res) => setData(res.data))
       .catch((err) => {
