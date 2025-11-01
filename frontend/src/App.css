@@ -1,0 +1,163 @@
+/*
+ * App.css
+ * Global styles for the full-width dashboard layout.
+ */
+
+.app-container {
+  /* Use a more professional font stack */
+  font-family: "Poppins", "Noto Sans Devanagari", Arial, sans-serif;
+  background-color: #f0f4f8; /* Very light, cool background */
+  color: #333;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Richer, thematic gradient */
+  background: linear-gradient(135deg, #1a4d2e, #2e6644);
+  /* A subtle, gold-like bottom border */
+  border-bottom: 4px solid #f9a825;
+  padding: 20px 40px; /* Increased padding */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.emblem {
+  height: 80px; /* Slightly larger emblem */
+  margin-right: 25px;
+}
+
+.header-text {
+  text-align: center;
+  color: #ffffff; /* White text for contrast */
+}
+
+.header-text h1 {
+  font-size: 1.8rem; /* Larger, more prominent title */
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.header-text h2 {
+  font-size: 1.1rem;
+  margin: 4px 0;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+.header-text p {
+  font-size: 1rem;
+  color: #f9a825; /* Gold accent color */
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* ===== MAIN ===== */
+main {
+  /* *** Crucial Fix: Use 100% width and set padding/margin for spacing *** */
+  width: 100%;
+  margin: 30px auto; /* Keep vertical margin */
+  padding: 0 20px; /* Add horizontal padding to the main area */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+  background: #ffffff;
+  border-left: 6px solid #4caf50;
+  padding: 20px;
+  /* *** Crucial Fix: Use 100% width with calc and align with main padding *** */
+  width: calc(
+    100% - 40px
+  ); /* 100% minus the 20px padding on each side of main */
+  max-width: 1400px;
+  margin: 30px auto 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #1a4d2e;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-box li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+}
+
+.info-box strong {
+  color: #1a4d2e;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  color: #999;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .emblem {
+    height: 60px;
+    margin: 0 0 10px 0;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text h2 {
+    font-size: 1rem;
+  }
+
+  main {
+    margin: 20px 0; /* Remove horizontal margin */
+    padding: 0 10px; /* Smaller padding for mobile */
+    width: 100%;
+  }
+
+  .info-box {
+    width: calc(100% - 20px); /* Adjust for mobile padding */
+    margin: 30px auto 40px auto;
+  }
+}
+.trend-toggle-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.trend-toggle-btn:hover {
+  background-color: #1e40af;
+}

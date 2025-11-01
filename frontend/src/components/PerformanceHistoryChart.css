@@ -1,0 +1,68 @@
+/* ... (Existing styles for .chart-container, .summary-grid, etc., remain above this section) ... */
+
+
+/* --- Historical Trend Section Styles --- */
+
+/* Removed the redundant .history-chart-container and consolidated styles into .trend-section */
+
+.trend-section {
+  /* Inherit some properties from the main container's look, but distinguish it */
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  /* Use lighter shadow than the main summary grid */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  /* Adjusted padding for a better visual fit */
+  padding: 30px 40px; 
+  border: 1px solid #e5e7eb; /* Subtle boundary line */
+}
+
+.trend-title {
+  text-align: center;
+  font-weight: 700; /* Bolder for main section title */
+  font-size: 1.8rem; /* Larger, more prominent title */
+  color: #1a4d2e; /* Using the thematic dark green */
+  margin-bottom: 30px; /* More space below the main title */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e7eb; /* Separator line */
+}
+
+.trend-chart-box {
+  margin-bottom: 50px; /* Increased vertical separation between charts */
+  padding: 15px; /* Internal padding for a slightly raised effect */
+  border-radius: 12px;
+  background-color: #fcfcfc; /* Very light background for chart area */
+  border: 1px solid #f3f4f6;
+}
+
+.trend-chart-box h3 {
+  margin-bottom: 20px;
+  color: #374151;
+  font-weight: 600; /* Medium-bold for chart headers */
+  font-size: 1.3rem;
+  /* Simple separator below the chart sub-title */
+  border-left: 4px solid #007bff; 
+  padding-left: 10px;
+  line-height: 1.2;
+}
+
+/* Enhancing Recharts Tooltip/Legend appearance (since it's common to all charts) */
+.recharts-default-tooltip {
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px !important;
+}
+
+.recharts-legend-wrapper {
+  padding-top: 15px !important;
+}
+
+/* Default chart messages - moved to better location */
+.chart-message {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  padding: 20px 0; /* Consistent padding */
+  font-style: italic;
+}

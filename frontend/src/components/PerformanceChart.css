@@ -1,0 +1,209 @@
+/*
+ * PerformanceChart.css
+ * Styles updated for enhanced visual appeal and usability.
+ */
+
+.chart-container {
+  max-width: 1400px;
+  margin: 20px auto; /* Centered with vertical margin */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 40px; /* Increased horizontal padding */
+  /* Softer, deeper shadow */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Summary Grid and Cards --- */
+.summary-grid {
+  display: grid;
+  gap: 30px; /* Reduced gap for a tighter look */
+  margin-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align text to the left */
+  justify-content: space-between;
+  padding: 30px; /* Generous padding */
+  border-radius: 16px; /* Slightly more rounded */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  color: #1a1a1a;
+  font-family: "Noto Sans Devanagari", Arial, sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card:hover {
+  transform: translateY(-8px); /* Deeper lift */
+  /* More prominent shadow on hover */
+  box-shadow: 0 15px 30px rgba(0, 128, 0, 0.15);
+}
+
+.card-label-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card-label {
+  font-size: 1.35rem; /* More dominant Hindi label */
+  color: #1a4d2e;
+  font-weight: 700; /* Bolder */
+  margin-right: 8px;
+  line-height: 1.2;
+}
+
+.card-label-english {
+  font-size: 0.9rem;
+  color: #555; /* Slightly darker grey for readability */
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px; /* Space before value */
+}
+
+.card-value {
+  font-size: 3.2rem; /* Much more dominant */
+  font-weight: 900; /* Black font weight */
+  margin-top: auto; /* Push value to the bottom of the content area */
+  color: #333; /* Ensuring value is very dark */
+}
+
+/* Tooltip/Help Icon */
+.help-icon {
+  font-size: 1.1rem; /* Slightly larger icon */
+  color: #007bff; /* Professional blue for focus/help elements */
+  cursor: help; /* Change cursor to 'help' */
+  margin-left: 5px;
+  transition: color 0.2s ease;
+}
+
+.summary-card:hover .help-icon {
+    color: #2563eb;
+}
+
+/* --- Tooltip Text Overlay --- */
+.card-tooltip {
+  position: absolute;
+  top: 0; /* Cover the whole card */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px; /* Better padding */
+  background-color: rgba(26, 77, 46, 0.98); /* Near-opaque dark green overlay */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  /* Match card radius on all corners */
+  border-radius: 16px;
+  opacity: 0;
+  /* Use scale for a "pop-in" effect */
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  line-height: 1.6;
+  display: flex; /* Centering text better */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.summary-card:hover .card-tooltip,
+.summary-card:focus-within .card-tooltip {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* --- Card Icon --- */
+.card-icon {
+  position: absolute; /* Place icon in a decorative corner */
+  top: 30px;
+  right: 30px;
+  font-size: 3.5rem; /* Larger icon */
+  opacity: 0.1; /* Very subtle background element */
+  transition: opacity 0.3s ease;
+}
+
+.summary-card:hover .card-icon {
+    opacity: 0.15; /* Slightly more visible on hover */
+}
+
+
+/* --- Color Themes --- */
+/* Green Card (Total Works) */
+.green-card {
+  background-color: #f0fdf4; /* Lighter green background */
+}
+.green-icon {
+  color: #15803d; /* Deeper green */
+}
+
+/* Blue Card (Person Days) */
+.blue-card {
+  background-color: #f0f9ff; /* Lighter blue background */
+}
+.blue-icon {
+  color: #2563eb;
+}
+
+/* Yellow Card (Expenditure) */
+.yellow-card {
+  background-color: #fffbeb; /* Lighter yellow/amber background */
+}
+.yellow-icon {
+  color: #d97706;
+}
+
+/* --- Chart Box and Messages (Minor Adjustments) --- */
+.chart-box {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 40px; /* Increased spacing */
+  margin-top: 10px;
+}
+
+.chart-message {
+  text-align: center;
+  color: #666;
+  font-size: 1.15rem; /* Slightly larger */
+  padding: 50px 0; /* More vertical space */
+}
+
+.last-updated {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
