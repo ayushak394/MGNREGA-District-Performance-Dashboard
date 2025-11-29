@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./DistrictSelector.css";
-import API_BASE from "../api"; // or correct relative path
+import API_BASE from "../api.js"; // or correct relative path
 
 const DistrictSelector = ({ selection, setSelection }) => {
   const [districts, setDistricts] = useState([]);

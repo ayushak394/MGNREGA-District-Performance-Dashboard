@@ -11,7 +11,7 @@ import {
   Legend,
 } from "recharts";
 import "./PerformanceChart.css";
-import API_BASE from "../api"; // or correct relative path
+import API_BASE from "../api.js"; // or correct relative path
 
 const PerformanceHistoryChart = ({ district }) => {
   const [history, setHistory] = useState([]);
