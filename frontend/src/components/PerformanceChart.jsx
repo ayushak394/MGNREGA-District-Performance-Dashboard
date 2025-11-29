@@ -17,7 +17,7 @@ import {
   FaQuestionCircle,
 } from "react-icons/fa";
 import "./PerformanceChart.css";
-import API_BASE from "../api.js"; // or correct relative path
+import { API_BASE } from "../api.js";
 
 
 const SummaryCard = ({
